@@ -54,7 +54,7 @@ class GPak:
         data = [value]
         self.bus.write_i2c_block_data(addr,reg, data)
 
-    def read_reg(self, reg, value):
+    def read_reg(self, reg):
         addr = self.i2caddr(self.REG_CONFIG)
         return self.bus.read_i2c_block_data(addr, reg, 1)[0]
 
