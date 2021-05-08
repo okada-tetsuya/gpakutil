@@ -109,8 +109,8 @@ if __name__ == '__main__':
         area = GPak.EEPROM
         erase = True
 
-    bus = smbus2.SMBus(args.busno, args.addr)
-    gpak = GPak(bus)
+    bus = smbus2.SMBus(args.busno)
+    gpak = GPak(bus, args.addr)
     
     if args.write:
         # Write action
